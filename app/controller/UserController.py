@@ -19,3 +19,22 @@ def transform(users):
         })
     return array
 
+def show(id):
+    try:
+        users = Users.query.filter_by(id=id).first()
+        if not users:
+            return response.badRequest([], "Empty...")
+    
+        data = singleTransform(users)
+        return response.ok(data, "")
+    except Exception as e:
+        print(e)
+
+def singleTransform(users):
+    data = {
+        "id" : users.id,
+        "name" : users.name,
+        "email" : users.email
+    }
+    
+    return data

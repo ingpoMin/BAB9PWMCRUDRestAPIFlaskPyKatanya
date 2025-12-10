@@ -6,8 +6,8 @@ class Todos(db.Model):
     id = db.Column(db.BigInteger, primary_key = True, autoincrement = True)
     todo = db.Column(db.String(140), nullable = False)
     description = db.Column(db.Text, nullable = True)
-    created_at = db.Column(db.Datetime, index = True)
-    updated_at = db.Column(db.DateTime, index = True, default = datetime.utnow)
+    created_at = db.Column(db.DateTime, index = True)
+    updated_at = db.Column(db.DateTime, index = True, default = datetime.utcnow)
     user_id = db.Column(db.BigInteger, db.ForeignKey(Users.id))
 
     def __repr__(self):
