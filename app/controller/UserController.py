@@ -10,6 +10,7 @@ def index():
         return response.ok(data, "")
     except Exception as e:
         print(e)
+        return response.badRequest([], str(e))
 
 def transform(users):
     array = []
@@ -31,6 +32,7 @@ def show(id):
         return response.ok(data, "")
     except Exception as e:
         print(e)
+        return response.badRequest([], str(e))
 
 def singleTransform(users):
     data = {
