@@ -13,7 +13,11 @@ def users():
     else:
         return UserController.store()
 
-@app.route ("/users/<int:id>")
+@app.route ("/users/<int:id>", methods = ["PUT", "DELETE", "GET"])
 def usersDetail(id):
-    print(id)
-    return UserController.show(id)
+    if request.method == "GET":
+        return UserController.show(id)
+    elif request.method == "PUT":
+        return UserController.update(id)
+    elif request.method == "DELETE":
+        return UserController.delete(id)
