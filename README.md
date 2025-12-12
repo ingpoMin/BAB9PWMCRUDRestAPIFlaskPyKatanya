@@ -8,6 +8,7 @@ git clone https://github.com/ingpoMin/BAB9PWMCRUDRestAPIFlaskPyKatanya.git
 cd BAB9PWMCRUDRestAPIFlaskPyKatanya
 
 ```
+atau anda bisa mendownload zip-nya dan ekstrak secara manual
 
 ### 2. Buat Virtual Environment
 Disarankan menggunakan virtual environment agar *package* tidak bercampur.
