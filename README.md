@@ -1,6 +1,6 @@
 ## Daftar Endpoint API
 
-| Method | Endpoint | Deskripsi | Body (JSON) |
+| Method | Endpoint | Deskripsi | Parameter (JSON) |
 | :--- | :--- | :--- | :--- |
 | **GET** | `/` | Cek server berjalan | - |
 | **GET** | `/users` | Ambil semua data user | - |
